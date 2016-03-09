@@ -1,40 +1,30 @@
 ﻿using System;
-using System.Globalization;
-using System.Reflection;
-using System.Runtime.Remoting.Messaging;
-using System.Security.Cryptography;
-using Microsoft.Win32;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace SimpleNumbers
+namespace primeNumbers
 {
-
-    internal class Program
+    [TestClass]
+    public class UnitTest1
     {
-        private static void Main(string[] args)
+        [TestMethod]
+        public void TestMethod1()
         {
-            var firstNumber = -1;
-            var secondNumber = -1;
+            var st = "   2   3   5   7  11\n" +
+                     "  13  17  19  23  29\n" +
+                     "  31  37  41  43  47\n" +
+                     "  53  59  61  67  71\n" +
+                     "  73  79  83  89  97\n";
+            var sr = string.Empty;
+
+            var firstNumber = 1;
+            var secondNumber = 100;
             var n = 0;
-            string key;
-
-            do
-            {
-                Console.WriteLine("Enter the first number: ");
-                key = Console.ReadLine();
-            } while (!Int32.TryParse(key, out firstNumber) || (firstNumber < 0));
-
-            do
-            {
-                Console.WriteLine("Enter the last number: ");
-                key = Console.ReadLine();
-            } while (!Int32.TryParse(key, out secondNumber) || (secondNumber < 0));
-
-            Console.WriteLine("Simple numbers in enter diapazon is:");
+            
 
             {
                 if (firstNumber == 1)
-                 {
-                firstNumber = firstNumber + 1;
+                {
+                    firstNumber = firstNumber + 1;
                     for (int i = firstNumber; i <= secondNumber; i++)
                     {
                         int cnt = 0;
@@ -58,26 +48,25 @@ namespace SimpleNumbers
 
                             while (symbolLenght > 0)
                             {
-                                Console.Write(' ');
+                                sr = sr + (" ");
                                 symbolLenght--;
                             }
 
-                            Console.Write(i);
+                            sr = sr + (i);
                             n++;
+
                             if (n%5 == 0)
                             {
-                                Console.Write('\n');
+                                sr = sr + ('\n');
                             }
                         }
-                        
-
                     }
                 }
-                
-                
+
+
             }
-                Console.ReadKey();
-            }
+            Assert.AreEqual(st, sr);
         }
     }
-
+}
+    
