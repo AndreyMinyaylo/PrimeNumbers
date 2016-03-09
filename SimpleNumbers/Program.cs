@@ -74,10 +74,35 @@ namespace SimpleNumbers
                     }
                 }
                 
-                
+                }
+            do
+            {
+                Console.WriteLine("Enter number and we check number is simple or no:");
+                key = Console.ReadLine();
+            } while (!Int32.TryParse(key, out firstNumber) || (firstNumber < 0));
+            bool is_simple = true;
+            for (int i = 2; i < firstNumber/2; i++)
+            {
+
+                if (firstNumber%i == 0)
+                {
+                    is_simple = false;
+                    break;
+
+
+                }
             }
-                Console.ReadKey();
+            if (is_simple == true)
+            {
+                Console.WriteLine("Enter number " + firstNumber + " is simple number!");
             }
+            else
+            {
+                Console.Write("Enter number " + firstNumber + " is not simple number!");
+            }
+            Console.ReadKey();
         }
-    }
+        }
+            }
+        
 
