@@ -64,7 +64,7 @@ namespace SimpleNumbers
 
                             Console.Write(i);
                             n++;
-                            if (n%5 == 0)
+                            if (n%10 == 0)
                             {
                                 Console.Write('\n');
                             }
@@ -77,7 +77,7 @@ namespace SimpleNumbers
                 }
             do
             {
-                Console.WriteLine("Enter number and we check number is simple or no:");
+                Console.WriteLine('\n'+"Enter number and we check number is simple or no:");
                 key = Console.ReadLine();
             } while (!Int32.TryParse(key, out firstNumber) || (firstNumber < 0));
             bool is_simple = true;
