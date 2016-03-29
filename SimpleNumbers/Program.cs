@@ -10,7 +10,7 @@ namespace SimpleNumbers
 
     internal class Program
     {
-        private static bool isSimple(int number)
+        public static bool isSimple(int number)
         {
             if (number < 2)
             {
@@ -28,7 +28,9 @@ namespace SimpleNumbers
             return is_simple;
         }
 
-        private static void printToMatrix(int i, int secondNumber)
+
+
+        public static void printToMatrix(int i, int secondNumber)
         {
             var lenghtI = Convert.ToString(i).Length;
             var symbolLenght = Convert.ToString(secondNumber).Length;
@@ -49,7 +51,7 @@ namespace SimpleNumbers
             Console.Write(i);
         }
 
-        private static void printSimpleNumbers(int firstNumber, int secondNumber)
+        public static void printSimpleNumbers(int firstNumber, int secondNumber)
         {
             Console.WriteLine("Simple numbers in enter diapazon is:");
             var n = 0;
@@ -74,13 +76,13 @@ namespace SimpleNumbers
             }
         }
 
-        private static void printSimleNumberEnd()
+        public static void printSimleNumberEnd()
         {
             while (true)
             {
-                Console.WriteLine('\n' + "Enter number and we check number is simple or no or enter 0 to exit:");
+                Console.WriteLine('\n' + "Enter number and we check number is simple or no or enter 3 to exit:");
                 int number = consoleRead();
-                if (number == 0)
+                if (number == 3)
                 {
                     break;
                 }
@@ -96,7 +98,7 @@ namespace SimpleNumbers
             }
         }
 
-        private static int consoleRead()
+        public static int consoleRead()
         {
             string key;
             int number;
@@ -106,20 +108,48 @@ namespace SimpleNumbers
             } while (!Int32.TryParse(key, out number) || (number < 0));
             return number;
         }
-        private static void Main(string[] args)
+
+
+        public static void selMethod(int select, int firstNumber, int secondNumber)
+        {
+            do
+            {
+                Console.WriteLine("\n" + "If you want to test a range of numbers - enter 1, If one number , press - 2 , exit - 3");
+                select = consoleRead();
+
+                if (select == 1)
+                {
+
+                    Console.WriteLine("Enter the first number: ");
+                    firstNumber = consoleRead();
+
+                    Console.WriteLine("Enter the last number: ");
+                    secondNumber = consoleRead();
+                    printSimpleNumbers(firstNumber, secondNumber);
+                    select = 0;
+                }
+
+                if (select == 2)
+                {
+                    printSimleNumberEnd();
+                    select = 0;
+                }
+
+                while (select == 3)
+                {
+                    break;
+                }
+            } while (select == 0);
+        }
+
+        public static
+        void Main(string[] args)
         {
             var firstNumber = -1;
             var secondNumber = -1;
-            Console.WriteLine("Enter the first number: ");
-            firstNumber = consoleRead();
+            var select = -1;
 
-            Console.WriteLine("Enter the last number: ");
-            secondNumber = consoleRead();
-
-            printSimpleNumbers(firstNumber, secondNumber);
-
-            printSimleNumberEnd();
-
+            selMethod(select, firstNumber, secondNumber);
             Console.ReadKey();
         }
     }
