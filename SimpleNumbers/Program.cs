@@ -110,8 +110,11 @@ namespace SimpleNumbers
         }
 
 
-        public static void selMethod(int select, int firstNumber, int secondNumber)
+        public static void selMethod()
         {
+            int select;
+            int firstNumber;
+            int secondNumber;
             do
             {
                 Console.WriteLine("\n" + "If you want to test a range of numbers - enter 1, If one number , press - 2 , exit - 3");
@@ -126,30 +129,20 @@ namespace SimpleNumbers
                     Console.WriteLine("Enter the last number: ");
                     secondNumber = consoleRead();
                     printSimpleNumbers(firstNumber, secondNumber);
-                    select = 0;
                 }
 
                 if (select == 2)
                 {
                     printSimleNumberEnd();
-                    select = 0;
                 }
 
-                while (select == 3)
-                {
-                    break;
-                }
-            } while (select == 0);
+            } while (select != 3);
         }
 
         public static
         void Main(string[] args)
         {
-            var firstNumber = -1;
-            var secondNumber = -1;
-            var select = -1;
-
-            selMethod(select, firstNumber, secondNumber);
+            selMethod();
             Console.ReadKey();
         }
     }
