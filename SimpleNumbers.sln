@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleNumbers", "SimpleNumb
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "simpleNumbersTest", "simpleNumbersTest\simpleNumbersTest\simpleNumbersTest.csproj", "{A4FEA49E-E7F6-42EC-8CAC-97D267C024B1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "simpleNumbers_ConsoleOut", "simpleNumbers_Test_1\simpleNumbers_ConsoleOut.csproj", "{75B991C9-430D-429E-B701-04A3B2A9E0A9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{A4FEA49E-E7F6-42EC-8CAC-97D267C024B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4FEA49E-E7F6-42EC-8CAC-97D267C024B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4FEA49E-E7F6-42EC-8CAC-97D267C024B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75B991C9-430D-429E-B701-04A3B2A9E0A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75B991C9-430D-429E-B701-04A3B2A9E0A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75B991C9-430D-429E-B701-04A3B2A9E0A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75B991C9-430D-429E-B701-04A3B2A9E0A9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
