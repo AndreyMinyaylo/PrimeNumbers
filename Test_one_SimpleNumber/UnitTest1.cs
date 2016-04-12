@@ -7,17 +7,17 @@ namespace Test_one_SimpleNumber
     public class Test_oneNumber
     {
         [TestMethod]
-        
-            public static bool isSimple(int number)
+
+        public static bool isSimple(int number)
         {
             if (number < 2)
             {
                 return false;
             }
             bool is_simple = true;
-            for (int i = 2; i < number / 2; i++)
+            for (int i = 2; i < number/2; i++)
             {
-                if (number % i == 0)
+                if (number%i == 0)
                 {
                     is_simple = false;
                     break;
@@ -29,6 +29,7 @@ namespace Test_one_SimpleNumber
 
         public static void printSimleNumberEnd()
         {
+            Console.WriteLine("!");
             var st = "Number 7 is simple";
             var sr = string.Empty;
             var number = 7;
@@ -43,7 +44,7 @@ namespace Test_one_SimpleNumber
                 bool is_Simple = isSimple(number);
                 if (is_Simple == true)
                 {
-                    sr = sr +"Number " + number + " is simple";
+                    sr = sr + "Number " + number + " is simple";
                 }
                 else
                 {
@@ -52,13 +53,7 @@ namespace Test_one_SimpleNumber
                 Assert.AreEqual(st, sr);
             }
         }
-
-
-        public static void Main(string[] args)
-            {
-                var number = 7;
-
-            Console.ReadKey();
-        }
     }
+
+
 }

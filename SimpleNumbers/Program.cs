@@ -78,9 +78,12 @@ namespace SimpleNumbers
 
         public static void printSimleNumberEnd()
         {
+            string newString = "\n",
+                checkString = "Enter number and we check number is simple or no or enter 3 to exit:";
+
             while (true)
             {
-                Console.WriteLine('\n' + "Enter number and we check number is simple or no or enter 3 to exit:");
+                Console.WriteLine(String.Format("{0}{1}",newString,checkString));
                 int number = consoleRead();
                 if (number == 3)
                 {
@@ -89,11 +92,11 @@ namespace SimpleNumbers
                 bool is_Simple = isSimple(number);
                 if (is_Simple == true)
                 {
-                    Console.Write("Number " + number + " is simple");
+                    Console.Write(string.Format("Number {0} is simple", number));
                 }
                 else
                 {
-                    Console.Write("Number " + number + " is not simple");
+                    Console.Write(string.Format("Number {0} is not simple",number));
                 }
             }
         }
@@ -115,9 +118,15 @@ namespace SimpleNumbers
             int select;
             int firstNumber;
             int secondNumber;
+            string change_1 = "If you want to test a range of numbers - enter 1, ",
+                    change_2 = "If one number , press - 2, ",
+                    change_3 = "exit - 3",
+                    newString = "\n";
             do
             {
-                Console.WriteLine("\n" + "If you want to test a range of numbers - enter 1, If one number , press - 2 , exit - 3");
+                
+
+                Console.WriteLine(String.Format("{0}{1}{2}{3}", newString, change_1, change_2, change_3));
                 select = consoleRead();
 
                 if (select == 1)
