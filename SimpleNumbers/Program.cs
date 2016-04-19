@@ -98,6 +98,7 @@ namespace SimpleNumbers
                 {
                     Console.Write(string.Format("Number {0} is not simple",number));
                 }
+                break;
             }
         }
 

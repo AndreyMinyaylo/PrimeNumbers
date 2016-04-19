@@ -6,7 +6,6 @@ namespace Test_one_SimpleNumber
     [TestClass]
     public class Test_oneNumber
     {
-        [TestMethod]
 
         public static bool isSimple(int number)
         {
@@ -14,46 +13,52 @@ namespace Test_one_SimpleNumber
             {
                 return false;
             }
-            bool is_simple = true;
+            bool is_Simple = true;
             for (int i = 2; i < number/2; i++)
             {
                 if (number%i == 0)
                 {
-                    is_simple = false;
+                    is_Simple = false;
                     break;
                 }
             }
-            return is_simple;
+            return is_Simple;
         }
 
-
-        public static void printSimleNumberEnd()
-        {
-            Console.WriteLine("!");
+        [TestMethod]
+            public void printSimleNumberEnd()
+            {
+            string newString = "\n", checkString = "Enter number and we check number is simple or no or enter 3 to exit:";
+            var number = 7;
             var st = "Number 7 is simple";
             var sr = string.Empty;
-            var number = 7;
-            while (true)
-            {
-                Console.WriteLine('\n' + "Enter number and we check number is simple or no or enter 3 to exit:");
-
-                if (number == 3)
+            var st_1 = "\nEnter number and we check number is simple or no or enter 3 to exit:";
+            var sr_1 = string.Empty;
+            
+                while (true)
                 {
-                    break;
-                }
+
+                    sr_1 = newString + checkString;
+                    
+                if (number == 3)
+                    {
+                        break;
+                    }
+              
                 bool is_Simple = isSimple(number);
                 if (is_Simple == true)
-                {
-                    sr = sr + "Number " + number + " is simple";
-                }
-                else
-                {
-                    sr = sr + "Number " + number + " is not simple";
-                }
-                Assert.AreEqual(st, sr);
+                    {
+                        sr = "Number " +number+" is simple";
+                    
+                    }
+                    else
+                    {
+                        sr = "Number "+number+" is not simple";
+                    }
+                break;
             }
+            Assert.AreEqual(st_1, sr_1);
+            Assert.AreEqual(st, sr);
         }
-    }
-
-
-}
+        }
+  }
