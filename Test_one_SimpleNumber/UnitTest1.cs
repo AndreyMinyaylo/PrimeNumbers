@@ -38,8 +38,8 @@ namespace Test_one_SimpleNumber
                 while (true)
                 {
 
-                    sr_1 = newString + checkString;
-                    
+                    sr_1 = String.Format("{0}{1}", newString, checkString);
+
                 if (number == 3)
                     {
                         break;
@@ -48,13 +48,13 @@ namespace Test_one_SimpleNumber
                 bool is_Simple = isSimple(number);
                 if (is_Simple == true)
                     {
-                        sr = "Number " +number+" is simple";
-                    
-                    }
+                        sr = string.Format("Number {0} is simple", number);
+
+                }
                     else
                     {
-                        sr = "Number "+number+" is not simple";
-                    }
+                        sr = string.Format("Number {0} is not simple", number);
+                }
                 break;
             }
             Assert.AreEqual(st_1, sr_1);
