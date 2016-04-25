@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "simpleNumbers_ConsoleOut", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_one_SimpleNumber", "Test_one_SimpleNumber\Test_one_SimpleNumber.csproj", "{1B544A7E-BE87-484D-B665-39BF1E2ABD80}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_matrix_simpleNumbers", "Test_matrix_simpleNumbers\Test_matrix_simpleNumbers.csproj", "{6CA86D91-D04C-42B4-BCCB-14B37B8A78BD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{1B544A7E-BE87-484D-B665-39BF1E2ABD80}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B544A7E-BE87-484D-B665-39BF1E2ABD80}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B544A7E-BE87-484D-B665-39BF1E2ABD80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CA86D91-D04C-42B4-BCCB-14B37B8A78BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CA86D91-D04C-42B4-BCCB-14B37B8A78BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CA86D91-D04C-42B4-BCCB-14B37B8A78BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CA86D91-D04C-42B4-BCCB-14B37B8A78BD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

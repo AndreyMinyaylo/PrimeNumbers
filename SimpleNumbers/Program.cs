@@ -12,18 +12,21 @@ namespace SimpleNumbers
     {
         public static bool isSimple(int number)
         {
+            
             if (number < 2)
             {
                 return false;
             }
             bool is_simple = true;
-            for (int i = 2; i < number / 2; i++)
+            for (int i = 2; i < number; i++)
             {
-                if (number % i == 0)
+               
+                if (number%i == 0)
                 {
                     is_simple = false;
                     break;
                 }
+               
             }
             return is_simple;
         }
@@ -149,8 +152,7 @@ namespace SimpleNumbers
             } while (select != 3);
         }
 
-        public static
-        void Main(string[] args)
+        public static void Main(string[] args)
         {
             selMethod();
             Console.ReadKey();
