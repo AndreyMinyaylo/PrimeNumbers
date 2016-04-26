@@ -6,7 +6,7 @@ namespace simpleNumbers_ConsoleOut
     [TestClass]
     public class ConsoleOut
     {
-        [TestMethod]
+       
 
         public static bool isSimple(int number)
         {
@@ -15,7 +15,7 @@ namespace simpleNumbers_ConsoleOut
                 return false;
             }
             bool is_simple = true;
-            for (int i = 2; i < number / 2; i++)
+            for (int i = 2; i < number; i++)
             {
                 if (number % i == 0)
                 {
@@ -76,15 +76,15 @@ namespace simpleNumbers_ConsoleOut
             }
             Assert.AreEqual(st, sr);
         }
-
-        public static void printSimleNumberEnd()
+       
+        public  void printSimleNumberEnd()
         {
-            var st = '\n' + "Enter number and we check number is simple or no or enter 3 to exit:";
-            var sr = string.Empty;
+           /* var st = '\n' + "Enter number and we check number is simple or no or enter 3 to exit:";
+            var sr = string.Empty;*/
             while (true)
             {
-                sr = sr + '\n' + "Enter number and we check number is simple or no or enter 3 to exit:";
-                int number = consoleRead();
+                Console.Write('\n' + "Enter number and we check number is simple or no or enter 3 to exit:");
+                int number = 7;
                 if (number == 3)
                 {
                     break;
@@ -97,9 +97,11 @@ namespace simpleNumbers_ConsoleOut
                 else
                 {
                     Console.Write("Number " + number + " is not simple");
+                    
                 }
+                //break;
             }
-            Assert.AreEqual(st, sr);
+           // Assert.AreEqual(st, sr);
         }
 
         public static int consoleRead()
@@ -113,45 +115,38 @@ namespace simpleNumbers_ConsoleOut
             return number;
         }
 
-
-        public static void selMethod()
+        [TestMethod]
+        public  void selMethod()
         {
-            var st = "\n" + "If you want to test a range of numbers - enter 1, If one number , press - 2 , exit - 3";
+            var st = "\nIf you want to test a range of numbers - enter 1, If one number , press - 2 , exit - 3";
             var sr = string.Empty;
-            int select;
+            int select = 1;
             int firstNumber;
             int secondNumber;
             do
             {
-                sr = sr + "\n" + "If you want to test a range of numbers - enter 1, If one number , press - 2 , exit - 3";
-                select = consoleRead();
+                sr = sr + "\nIf you want to test a range of numbers - enter 1, If one number , press - 2 , exit - 3";
+                /* select = 1;
 
-                if (select == 1)
-                {
+                 if (select == 1)
+                 {
 
-                    Console.WriteLine("Enter the first number: ");
-                    firstNumber = consoleRead();
+                     Console.WriteLine("Enter the first number: ");
+                     firstNumber = 1;
 
-                    Console.WriteLine("Enter the last number: ");
-                    secondNumber = consoleRead();
-                    printSimpleNumbers(firstNumber, secondNumber);
-                }
+                     Console.WriteLine("Enter the last number: ");
+                     secondNumber = 100;
+                     printSimpleNumbers(firstNumber, secondNumber);
+                 }
 
-                if (select == 2)
-                {
-                    printSimleNumberEnd();
-                }
-
+                 if (select == 2)
+                 {
+                     printSimleNumberEnd();
+                 }*/
+                break;
             } while (select != 3);
             Assert.AreEqual(st, sr);
         }
-
-        public static
-        void Main(string[] args)
-        {
-            selMethod();
-            Console.ReadKey();
-        }
-
+       
     }
 }
