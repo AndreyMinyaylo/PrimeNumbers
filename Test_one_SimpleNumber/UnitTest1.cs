@@ -5,7 +5,7 @@ using Assert = NUnit.Framework.Assert;
 
 namespace Test_one_SimpleNumber
 {
-  
+    [TestFixture]
     public class Test_oneNumber
     {
 
@@ -27,7 +27,7 @@ namespace Test_one_SimpleNumber
             return is_Simple;
         }
 
-        
+       
         [TestCase(10, "Number 10 is not simple")]
         [TestCase(7, "Number 7 is simple")]
         [TestCase(4, "Number 4 is not simple")]
