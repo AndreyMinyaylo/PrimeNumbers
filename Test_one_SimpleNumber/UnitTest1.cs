@@ -1,9 +1,11 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
+using Assert = NUnit.Framework.Assert;
 
 namespace Test_one_SimpleNumber
 {
-    [TestClass]
+  
     public class Test_oneNumber
     {
 
@@ -14,7 +16,7 @@ namespace Test_one_SimpleNumber
                 return false;
             }
             bool is_Simple = true;
-            for (int i = 2; i < number/2; i++)
+            for (int i = 2; i < number; i++)
             {
                 if (number%i == 0)
                 {
@@ -25,20 +27,24 @@ namespace Test_one_SimpleNumber
             return is_Simple;
         }
 
-        [TestMethod]
-            public void printSimleNumberEnd()
+        
+        [TestCase(10, "Number 10 is not simple")]
+        [TestCase(7, "Number 7 is simple")]
+        [TestCase(4, "Number 4 is not simple")]
+        [TestCase(17, "Number 17 is simple")]
+        public void printSimleNumberEnd(int number, string st)
             {
             string newString = "\n", checkString = "Enter number and we check number is simple or no or enter 3 to exit:";
-            var number = 7;
-            var st = "Number 7 is simple";
+            //var number = 7;
+           // var st = "Number 7 is simple";
             var sr = string.Empty;
-            var st_1 = "\nEnter number and we check number is simple or no or enter 3 to exit:";
+            Console.Write("\nEnter number and we check number is simple or no or enter 3 to exit:");
             var sr_1 = string.Empty;
             
                 while (true)
                 {
 
-                    sr_1 = String.Format("{0}{1}", newString, checkString);
+                Console.Write(String.Format("{0}{1}", newString, checkString));
 
                 if (number == 3)
                     {
@@ -57,7 +63,7 @@ namespace Test_one_SimpleNumber
                 }
                 break;
             }
-            Assert.AreEqual(st_1, sr_1);
+            
             Assert.AreEqual(st, sr);
         }
         }
